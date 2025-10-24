@@ -10,16 +10,7 @@ const App = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-base-100 text-base-content p-6">
-      <button className="btn btn-outline m-1">Default</button>
-      <button className="btn btn-outline btn-primary m-1">Primary</button>
-      <button className="btn btn-outline btn-secondary m-1">Secondary</button>
-      <button className="btn btn-outline btn-accent m-1">Accent</button>
-      <button className="btn btn-outline btn-info m-1">Info</button>
-      <button className="btn btn-outline btn-success m-1">Success</button>
-      <button className="btn btn-outline btn-warning m-1">Warning</button>
-      <button className="btn btn-outline btn-error m-1">Error</button>
-
+    <div>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/create" element={<CreatePage />} />

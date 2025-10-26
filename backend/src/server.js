@@ -8,9 +8,9 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+app.use(cors({ origin: "http://localhost:5173" }));
 app.use(express.json());
 app.use(ratelimiter);
-app.use(cors({ origin: "http://localhost:5173" }));
 app.use((req, res, next) => {
   console.log(req.path, req.method);
   next();

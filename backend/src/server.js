@@ -31,11 +31,11 @@ app.use((req, res, next) => {
 app.use("/api/notes", notesRoutes);
 
 // ✅ Corrected static file serving
-app.use(express.static(path.join(__dirname, "frontend/dist")));
+app.use(express.static(path.join(process.cwd(), "frontend/dist")));
 
 if (process.env.NODE_ENV === "production") {
   app.get(/.*/, (req, res) => {
-    res.sendFile(path.join(__dirname, "frontend/dist/index.html"));
+    res.sendFile(path.join(process.cwd(), "frontend/dist/index.html"));
   });
 }
 
